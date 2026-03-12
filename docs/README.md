@@ -14,7 +14,7 @@
 | **Pull Request** | [https://github.com/Kise1205/midterm-exam/pull/2/](https://github.com/Kise1205/midterm-exam/pull/2/) | 
 | **Milestone** | [https://github.com/Kise1205/midterm-exam/milestone/1?closed=1](https://github.com/Kise1205/midterm-exam/milestone/1?closed=1) | 
 | **Successful CI/CD Action** | [https://github.com/Kise1205/midterm-exam/actions/runs/23019716959/job/66853759498](https://github.com/Kise1205/midterm-exam/actions/runs/23019716959/job/66853759498) | 
-| **ssh cmd to your gcp** | `ssh -i student-key bcumbie@8.228.16.219` | 
+| **ssh cmd to your gcp** | `ssh -i student-key unokiss307@8.228.16.219` | 
 
 ---
 
