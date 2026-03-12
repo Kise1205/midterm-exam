@@ -7,13 +7,13 @@
 | Component | Link | 
 |-----------|------|
 | **GitHub Repository** | [https://github.com/Kise1205/midterm-exam](https://github.com/Kise1205/midterm-exam) | 
-| **GitHub Pages (docs/)** | [https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/) | 
-| **Dev Server (Render)** | [[https://your-app-name-dev.onrender.com]([https://midterm-exam-oph4.onrender.com/)](https://your-app-name-dev.onrender.com](https://midterm-exam-oph4.onrender.com/)) | 
+| **GitHub Pages (docs/)** | [https://kise1205.github.io/midterm-exam/](https://kise1205.github.io/midterm-exam/) | 
+| **Dev Server (Render)** | [https://midterm-exam-oph4.onrender.com/](https://midterm-exam-oph4.onrender.com/) | 
 | **Production Server (GCP)** | [http://8.228.16.219:3000](http://8.228.16.219:3000)) | 
-| **Issue** | [https://github.com/your-username/your-repo-name/issues/1](https://github.com/your-username/your-repo-name/issues/1) | 
-| **Pull Request** | [https://github.com/your-username/your-repo-name/pull/1](https://github.com/your-username/your-repo-name/pull/1) | 
-| **Milestone** | [https://github.com/your-username/your-repo-name/milestone/1](https://github.com/your-username/your-repo-name/milestone/1) | 
-| **Successful CI/CD Action** | [https://github.com/your-username/your-repo-name/actions/runs/your-run-id](https://github.com/your-username/your-repo-name/actions/runs/your-run-id) | 
+| **Issue** | [https://github.com/Kise1205/midterm-exam/issues/1](https://github.com/Kise1205/midterm-exam/issues/1) | 
+| **Pull Request** | [https://github.com/Kise1205/midterm-exam/pull/2/](https://github.com/Kise1205/midterm-exam/pull/2/) | 
+| **Milestone** | [https://github.com/Kise1205/midterm-exam/milestone/1?closed=1](https://github.com/Kise1205/midterm-exam/milestone/1?closed=1) | 
+| **Successful CI/CD Action** | [https://github.com/Kise1205/midterm-exam/actions/runs/23019716959/job/66853759498](https://github.com/Kise1205/midterm-exam/actions/runs/23019716959/job/66853759498) | 
 | **ssh cmd to your gcp** | `ssh -i student-key bcumbie@8.228.16.219` | 
 
 ---
