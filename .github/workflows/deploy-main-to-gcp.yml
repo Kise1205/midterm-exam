@@ -2,7 +2,7 @@ name: deploy-main-to-gcp.yml
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
   workflow_dispatch:
 
 jobs:
@@ -21,9 +21,17 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
+
             cd /home/unokiss307/midterm-exam
             
             git pull origin main
+=======
+            cd /home/unokiss307/midterm-exam || { echo "Directory not found"; exit 1; }
+            
+            git pull origin dev
+            
+            rm -rf node_modules
+
             npm install --production --no-audit --no-fund
 
             # Restart app
