@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Tech Exam</title>
+</head>
+
+<body>
+  <h1>Full Stack Tech Exam</h1>
+  
+  <!-- 💁🏼‍♂️ you may need to initialize some data before searching. Check the server endpoints -->
+  <div class="status-box">
+    <h2>Initialize Your Data</h2>
+    <button id="initBtn">Register My Name & Emoji</button>
+    <p id="initStatus"></p>
+  </div>
+  <div>
+    <h2>Search for Name</h2>
+    <!-- 
+    this form doesn't let you receive data back and put into the <p id="result">.
+    what do we need to do here with an external <script> 
+    -->
+
+    <form id="nameForm" method="post" action="api/get-name/">
+      <label for="userName">Enter name:</label>
+      <input id="userName" name="userName" placeholder="Enter a name (e.g., barry)" required>
+      <input type="submit" value="Search"> 
+    </form>
+    <p id="result"></p>
+  </div>
+  <script src="/js/scripts.js" type="module"></script>
+</body>
+
+</html>

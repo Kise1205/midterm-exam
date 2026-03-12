@@ -1,0 +1,40 @@
+name: deploy-main-to-gcp.yml
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare SSH
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy over SSH
+        shell: bash
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" << 'EOF'
+            set -e
+            cd /home/unokiss307/scaling-waddle || { echo "Directory not found"; exit 1; }
+            
+            git pull origin main
+            
+            rm -rf node_modules
+            npm install --production --no-audit --no-fund
+
+            pm2 delete "${{ vars.PM2_NAME }}" || true
+            pm2 start -f app.mjs --name "${{ vars.PM2_NAME }}"
+            pm2 save
+            
+            echo "Done!"
+          EOF

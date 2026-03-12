@@ -1,0 +1,31 @@
+{
+  "name": "full-stack-tech-exam",
+  "version": "1.0.0",
+  "main": "app.mjs",
+  "scripts": {
+    "dev": "nodemon app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrycumbie/full-stack-tech-exam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/barrycumbie/full-stack-tech-exam/issues"
+  },
+  "homepage": "https://github.com/barrycumbie/full-stack-tech-exam#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0",
+    "nodemon": "^3.1.14"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
+}
