@@ -1,0 +1,115 @@
+/* --- Root Variables & Reset --- */
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --success: #10b981;
+  --error: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- Container & Card --- */
+.container {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--bg);
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.status-box, .search-box {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* --- Form Elements --- */
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button, input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* --- Status & Results --- */
+#initStatus, #result {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+  text-align: center;
+}
+
+.success {
+  background-color: #ecfdf5;
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.error {
+  background-color: #fef2f2;
+  color: var(--error);
+  border: 1px solid var(--error);
+}
