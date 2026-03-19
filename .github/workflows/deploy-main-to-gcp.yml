@@ -22,10 +22,15 @@ jobs:
           script: |
             set -e
 
-            cd /home/unokiss307/midterm-exam || { echo "Directory not found"; exit 1; }
-            
-            git pull origin dev
-            
+            cd /home/unokiss307 || { echo "Directory not found"; exit 1; }
+
+            rm -rf midterm-exam
+
+            # Clone the repository
+            git clone -b dev git@github.com:Kise1205/midterm-exam.git midterm-exam
+
+            cd midterm-exam
+
             npm ci
 
             # Restart app
