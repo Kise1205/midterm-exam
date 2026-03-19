@@ -1,4 +1,4 @@
-># Full Stack Tech Exam - Readme Template
+># Full Stack Tech Exam
 
 **Name:** Thuan Nguyen
 
