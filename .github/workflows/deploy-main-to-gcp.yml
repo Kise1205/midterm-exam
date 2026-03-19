@@ -25,7 +25,7 @@ jobs:
             cd /home/unokiss307/midterm-exam
             
             git pull origin main
-=======
+
             cd /home/unokiss307/midterm-exam || { echo "Directory not found"; exit 1; }
             
             git pull origin dev
