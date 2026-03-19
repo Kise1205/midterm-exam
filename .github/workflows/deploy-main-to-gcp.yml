@@ -1,4 +1,4 @@
-name: Deploy to GCP on Pull Request to Dev
+name: Deploy to GCP on Push to Dev
 
 on:
   push:
@@ -22,16 +22,13 @@ jobs:
           script: |
             set -e
 
-            cd /home/unokiss307 || { echo "Directory not found"; exit 1; }
+            cd /home/unokiss307/midterm-exam || { echo "Directory not found"; exit 1; }
 
-            rm -rf midterm-exam
+            git pull origin dev
 
-            # Clone the repository
-            git clone -b dev git@github.com:Kise1205/midterm-exam.git midterm-exam
+            rm -rf node_modules
 
-            cd midterm-exam
-
-            npm ci
+            npm install
 
             # Restart app
             pm2 delete "${{ vars.PM2_NAME }}" || true
